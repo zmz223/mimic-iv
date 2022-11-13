@@ -1,4 +1,4 @@
-"patients" "patients" create table kdigo_aki (with cr_stg AS
+create table kdigo_aki as (with cr_stg AS
 (
   SELECT
     cr.stay_id
@@ -85,4 +85,3 @@ LEFT JOIN cr_stg cr
 LEFT JOIN uo_stg uo
   ON ie.stay_id = uo.stay_id
   AND tm.charttime = uo.charttime)
-;
